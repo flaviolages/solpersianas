@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="solpersianas">
+<head>
+	<title>Bando de Dados - Sol Persianas</title>
+
+
+
+	<!-- METAS -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="css/app.css">
+
+
+
+	<!-- lib -->
+		<!-- bootstrtap -->
+		<link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css">
+
+		<!-- angular -->
+		<script type="text/javascript" src="lib/angular/angular.js"></script>
+
+
+
+
+	<!-- script -->
+	<script type="text/javascript">
+		angular.module("solpersianas", []);
+
+		// CLINETE CONTROLLER
+		angular.module("solpersianas").controller("clienteCtrl", function($scope){
+
+			$scope.cliente = [
+			{nome:"Ana", rg:"7108140447", cpfcnpj:"02878966520", endereco:"Av Sete de Setembro 2653", bairro:"Centro", cidade:"Curitiba"},
+			{nome:"Maria", rg:"7108140447", cpfcnpj:"02878966520", endereco:"Rua Camera junior 1444", bairro:"Cajuru", cidade:"Curitiba"},
+        	{nome:"Benjamim", rg:"7108140447", cpfcnpj:"02878966520", endereco:"Av Sete de Setembro 2653", bairro:"Centro", cidade:"Curitiba"},
+      		{nome:"Lucas", rg:"7108140447", cpfcnpj:"02878966520", endereco:"Rua Camera junior 1444", bairro:"Cajuru", cidade:"Curitiba"},
+            {nome:"Enzo", rg:"7108140447", cpfcnpj:"02878966520", endereco:"Av Sete de Setembro 2653", bairro:"Centro", cidade:"Curitiba"},
+            {nome:"Noah", rg:"7108140447", cpfcnpj:"02878966520", endereco:"Rua Camera junior 1444", bairro:"Cajuru", cidade:"Curitiba"},
+            {nome:"Gabriel", rg:"7108140447", cpfcnpj:"02878966520", endereco:"Av Sete de Setembro 2653", bairro:"Centro", cidade:"Curitiba"},
+            {nome:"Leticia", rg:"7108140447", cpfcnpj:"02878966520", endereco:"Rua Camera junior 1444", bairro:"Cajuru", cidade:"Curitiba"},
+            {nome:"Miguel", rg:"7108140447", cpfcnpj:"02878966520", endereco:"Av Sete de Setembro 2653", bairro:"Centro", cidade:"Curitiba"},
+            {nome:"Heitor", rg:"7108140447", cpfcnpj:"02878966520", endereco:"Rua Camera junior 1444", bairro:"Cajuru", cidade:"Curitiba"},
+            {nome:"Gessilaine", rg:"7108140447", cpfcnpj:"02878966520", endereco:"Av Sete de Setembro 2653", bairro:"Centro", cidade:"Curitiba"},
+            {nome:"Heitor", rg:"7108140447", cpfcnpj:"02878966520", endereco:"Rua Camera junior 1444", bairro:"Cajuru", cidade:"Curitiba"},
+            {nome:"Nicolas", rg:"7108140447", cpfcnpj:"02878966520", endereco:"Av Sete de Setembro 2653", bairro:"Centro", cidade:"Curitiba"},
+            {nome:"Bernardo", rg:"7108140447", cpfcnpj:"02878966520", endereco:"Rua Camera junior 1444", bairro:"Cajuru", cidade:"Curitiba"},
+            {nome:"Heitor", rg:"7108140447", cpfcnpj:"02878966520", endereco:"Av Sete de Setembro 2653", bairro:"Centro", cidade:"Curitiba"},
+            {nome:"Willian", rg:"7108140447", cpfcnpj:"02878966520", endereco:"Rua Camera junior 1444", bairro:"Cajuru", cidade:"Curitiba"},
+        	{nome:"Felipe", rg:"7108140447", cpfcnpj:"02878966520", endereco:"Av Sete de Setembro 2653", bairro:"Centro", cidade:"Curitiba"},
+      		{nome:"Filipe", rg:"7108140447", cpfcnpj:"02878966520", endereco:"Rua Camera junior 1444", bairro:"Cajuru", cidade:"Curitiba"},
+        	{nome:"Fernanda", rg:"7108140447", cpfcnpj:"02878966520", endereco:"Av Sete de Setembro 2653", bairro:"Centro", cidade:"Curitiba"},
+      		{nome:"Arthur", rg:"7108140447", cpfcnpj:"02878966520", endereco:"Rua Camera junior 1444", bairro:"Cajuru", cidade:"Curitiba"},
+        	{nome:"Apolo", rg:"7108140447", cpfcnpj:"02878966520", endereco:"Av Sete de Setembro 2653", bairro:"Centro", cidade:"Curitiba"},
+      		{nome:"José", rg:"7108140447", cpfcnpj:"02878966520", endereco:"Rua Camera junior 1444", bairro:"Cajuru", cidade:"Curitiba"},
+	  		{nome:"Antonio", rg:"7108140447", cpfcnpj:"02878966520", endereco:"Av. Cel. Francisco H. dos Santos, 885", bairro:"Jardim da Americas", cidade:"Curitiba"}
+	  		];
+
+		});
+
+
+	</script>
+
+
+
+</head>
+<body>
+<div class="container">
+
+
+
+
+	<!-- MENU -->
+ 	<div class="header clearfix">
+   	<img class="logo" src="view/img/solpersianas-logo.jpg" alt="Sol Persianas Logo">
+    <nav>
+    <ul class="nav nav-pills pull-right">
+    <li role="presentation"><a href="#">Cliente</a></li>
+    <li role="presentation"><a href="#">Condomínio</a></li>
+    </ul>
+    </nav>
+    </div>
+    <!-- /MENU -->
+
+
+
+    <!-- SEARCH -->
+	<br>
+	<h4 class="sub-header">Procurar no Banco</h4>
+	<input type="text" class="form-control" placeholder="Pesquisar..." ng-model="pesquisar">
+	<br>
+	<!-- /SEARCH -->
+
+
+
+
+
+	<!-- TABLE -->
+	<div class="table-responsive" ng-controller="clienteCtrl">
+	<table class="table table-striped">
+    <thead>
+    <tr>
+    <th>Nome</th>
+    <th>Opções</th>
+    <th>Endereço</th>
+    <th class="col-md-1">Bairro</th>
+    </tr>
+    </thead>
+
+    <tbody>    
+    <tr ng-repeat="lista in cliente | filter:pesquisar">
+    <td>{{lista.nome}}</td>
+    <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Info</button>
+    <a href="mailto:joe@example.com"><button type="button" class="btn btn glyphicon glyphicon-envelope" data-dismiss="modal"></button></a>
+    <a href="https://www.google.com.br/maps/place/{{lista.endereco}},+{{lista.cidade}}+-+PR/">
+    <button type="button" class="btn btn glyphicon glyphicon-map-marker"></button></a>
+    <a href="tel:434343434"><button type="button" class="btn btn glyphicon glyphicon-earphone"></button></a>
+    </td>
+    <td>{{lista.endereco}}</td>
+    <td class="col-md-1">{{lista.bairro}}</td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+    <!-- /TABLE -->
+
+
+
+
+
+
+<!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content"  ng-controller="clienteCtrl">
+      <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <h4 class="modal-title">Informações</h4>
+      </div>
+        <div class="modal-body">
+          <div id="content" class="print"> 
+        
+
+          <address>
+          <strong>Joao</strong><br>
+          CPF: 055.333.333.40<br>
+          CNPJ:66422885000125<br>
+          <a href="phone:">41 998844-9999</a><br>
+          <a href="mailto:#">joao@gmail.com</a>
+          </address>
+
+
+         <address>
+         <strong>Condomínio residencial Vila Gardner.</strong><br>
+         Tv. Lange, 261 - Água Verde<br> 
+         Curitiba - PR, 80240-170<br>
+         <abbr title="Phone">P:</abbr> (41) 3456-7890
+         </address>
+
+        <address>
+        <strong>Arquiteto(a)</strong><br>
+        Maria <br>
+        41 99888-9988
+        <a href="mailto:#">arquiteto@gmail.com</a>
+        </address>
+
+
+        </div>
+        <div class="modal-footer">
+         <button type="button" class="btn btn-default glyphicon glyphicon-pencil" data-dismiss="modal"></button>
+        <button type="button" class="btn btn-default glyphicon glyphicon-print" data-dismiss="modal" onclick="window.print();return false;"></button>
+        <button type="button" class="btn btn-default " data-dismiss="modal">Fechar</button>
+        </div>
+        </div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<!-- /container -->
+
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
